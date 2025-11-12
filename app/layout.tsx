@@ -15,8 +15,9 @@ const comingSoon = Coming_Soon({
 });
 
 export const metadata: Metadata = {
-    title: "Wedding Invitation",
-    description: "Digital Wedding Invitation",
+    title: "Invitation de Mariage",
+    description:
+        "Marie-Paule & Christophe vous invitent à leur mariage coutumier",
     icons: {
         icon: [{ url: "/icon.jpg", type: "image/jpeg" }],
     },
