@@ -71,8 +71,11 @@ export function Book({ children }: BookProps) {
     };
 
     return (
-        <div className="flex h-screen items-center justify-center p-5 sm:p-3 md:p-4 bg-[#FFF8E7] overflow-hidden">
-            <div className="relative w-full max-w-4xl h-[80%] flex flex-col justify-center py-5 sm:py-2">
+        <div
+            className="flex h-[90vh] items-center justify-center px-5 sm:p-3 md:p-4 bg-[#FFF8E7] overflow-hidden"
+            style={{ overscrollBehavior: "contain" }}
+        >
+            <div className="relative w-full max-w-2xl h-[80vh] sm:h-[85vh] md:h-[85vh] py-0 sm:py-10 flex flex-col justify-center sm:justify-center ">
                 <AnimatePresence mode="wait">
                     {!isOpen ? (
                         <motion.div
@@ -81,17 +84,17 @@ export function Book({ children }: BookProps) {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.8 }}
                             transition={{ duration: 0.5 }}
-                            className="cursor-pointer w-full flex items-center justify-center"
+                            className="cursor-pointer w-full flex items-center justify-center h-full"
                             onClick={handleOpen}
                         >
                             {/* Book Cover - Front */}
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
-                                className="relative w-full max-w-sm sm:max-w-md aspect-3/4 max-h-[85vh]"
+                                className="relative w-full max-w-sm sm:max-w-md aspect-3/4 max-h-[95vh]"
                             >
                                 <motion.div
-                                    className="relative w-full h-full bg-linear-to-br from-[#F5D0C2] via-[#F5D0C2] to-[#F5D0C2] rounded-xl shadow-2xl border-4 border-[#F5D0C2] overflow-hidden"
+                                    className="relative w-full h-full bg-linear-to-br from-[#F5D0C2] via-[#F5D0C2] to-[#F5D0C2] rounded-xl shadow-2xl border-4 border-[#064e3b] overflow-hidden"
                                     style={{
                                         transformStyle: "preserve-3d",
                                     }}
@@ -110,7 +113,7 @@ export function Book({ children }: BookProps) {
                                     </div>
 
                                     {/* Decorative border */}
-                                    <div className="absolute inset-4 border-2 border-[#F5D0C2] rounded-xl z-10" />
+                                    <div className="absolute inset-4 border-2 border-[#064e3b] rounded-xl z-10" />
 
                                     {/* Title on cover */}
                                     <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
@@ -118,7 +121,7 @@ export function Book({ children }: BookProps) {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: 0.2 }}
-                                            className="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#F5D0C2] drop-shadow-lg mb-4"
+                                            className="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#064e3b] drop-shadow-lg mb-4"
                                             style={{
                                                 fontFamily:
                                                     "var(--font-great-vibes)",
@@ -130,13 +133,13 @@ export function Book({ children }: BookProps) {
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             transition={{ delay: 0.4 }}
-                                            className="w-24 h-0.5 bg-[#F5D0C2]/70 my-4"
+                                            className="w-24 h-0.5 bg-[#064e3b]/70 my-4"
                                         />
                                         <motion.p
                                             initial={{ opacity: 0, y: -20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: 0.6 }}
-                                            className="font-coming-soon text-sm sm:text-base text-[#F5D0C2] drop-shadow-md"
+                                            className="font-coming-soon text-sm sm:text-base text-white drop-shadow-md"
                                             style={{
                                                 fontFamily:
                                                     "var(--font-coming-soon)",
@@ -147,10 +150,10 @@ export function Book({ children }: BookProps) {
                                     </div>
 
                                     {/* Decorative corner elements */}
-                                    <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-[#F5D0C2]/50" />
-                                    <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-[#F5D0C2]/50" />
-                                    <div className="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-[#F5D0C2]/50" />
-                                    <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-[#F5D0C2]/50" />
+                                    <div className="absolute top-6 left-6 w-8 h-8 border-t-2 border-l-2 border-[#064e3b]/50" />
+                                    <div className="absolute top-6 right-6 w-8 h-8 border-t-2 border-r-2 border-[#064e3b]/50" />
+                                    <div className="absolute bottom-6 left-6 w-8 h-8 border-b-2 border-l-2 border-[#064e3b]/50" />
+                                    <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-[#064e3b]/50" />
                                 </motion.div>
                             </motion.div>
                         </motion.div>
@@ -176,16 +179,21 @@ export function Book({ children }: BookProps) {
                                             duration: 0.5,
                                             ease: "easeInOut",
                                         }}
-                                        className="bg-[#F5D0C2] rounded-lg shadow-xl border-2 border-[#0F4F40]/10 p-2 sm:p-3 md:p-4 flex-1 flex flex-col min-h-0 max-h-[calc(100vh-4rem)] sm:max-h-[calc(100vh-4.5rem)] md:max-h-[calc(100vh-5rem)] overflow-hidden"
+                                        className="bg-[#F5D0C2]/30 rounded-xl shadow-xl border-2 border-[#064e3b]/10 p-2 sm:p-3 md:p-4 flex-1 flex flex-col min-h-0 max-h-[calc(100vh-11rem)] sm:max-h-[calc(100vh-4.5rem)] md:max-h-[calc(100vh-5rem)] max-w-2xl mx-auto w-full overflow-hidden"
                                     >
-                                        <div className="flex-1 flex flex-col min-h-0 overflow-y-auto">
+                                        <div
+                                            className="flex-1 flex flex-col min-h-0 overflow-y-auto"
+                                            style={{
+                                                overscrollBehavior: "contain",
+                                            }}
+                                        >
                                             {children || renderPage()}
                                         </div>
                                     </motion.div>
                                 </AnimatePresence>
 
                                 {/* Navigation Controls */}
-                                <div className="flex items-center justify-between mt-1.5 sm:mt-2 px-2 sm:px-4 shrink-0">
+                                <div className="flex items-center justify-between py-5 sm:mt-5 px-5 sm:px-10 shrink-0">
                                     {/* Previous Button */}
                                     <motion.button
                                         onClick={handlePrevPage}
@@ -194,8 +202,8 @@ export function Book({ children }: BookProps) {
                                         whileTap={{ scale: 0.9 }}
                                         className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 transition-all ${
                                             currentPage === 0
-                                                ? "border-[#0F4F40]/20 text-[#0F4F40]/30 cursor-not-allowed"
-                                                : "border-[#0F4F40]/40 text-[#0F4F40] hover:bg-[#0F4F40]/10 cursor-pointer"
+                                                ? "border-[#064e3b]/20 text-[#064e3b]/30 cursor-not-allowed"
+                                                : "border-[#064e3b]/40 text-[#064e3b] hover:bg-[#064e3b]/10 cursor-pointer"
                                         }`}
                                         aria-label="Previous page"
                                     >
@@ -214,8 +222,8 @@ export function Book({ children }: BookProps) {
                                                 }
                                                 className={`transition-all ${
                                                     currentPage === index
-                                                        ? "w-3 h-3 bg-[#0F4F40] rounded-full"
-                                                        : "w-2 h-2 bg-[#0F4F40]/30 rounded-full hover:bg-[#0F4F40]/50"
+                                                        ? "w-3 h-3 bg-[#064e3b] rounded-full"
+                                                        : "w-2 h-2 bg-[#064e3b]/30 rounded-full hover:bg-[#064e3b]/50"
                                                 }`}
                                                 aria-label={`Go to page ${
                                                     index + 1
@@ -234,8 +242,8 @@ export function Book({ children }: BookProps) {
                                         whileTap={{ scale: 0.9 }}
                                         className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 transition-all ${
                                             currentPage === TOTAL_PAGES - 1
-                                                ? "border-[#0F4F40]/20 text-[#0F4F40]/30 cursor-not-allowed"
-                                                : "border-[#0F4F40]/40 text-[#0F4F40] hover:bg-[#0F4F40]/10 cursor-pointer"
+                                                ? "border-[#064e3b]/20 text-[#064e3b]/30 cursor-not-allowed"
+                                                : "border-[#064e3b]/40 text-[#064e3b] hover:bg-[#064e3b]/10 cursor-pointer"
                                         }`}
                                         aria-label="Next page"
                                     >
@@ -244,9 +252,9 @@ export function Book({ children }: BookProps) {
                                 </div>
 
                                 {/* Page Number Display */}
-                                <div className="text-center mt-1 shrink-0">
+                                <div className="text-center mt-0.5 sm:mt-1 shrink-0">
                                     <p
-                                        className="font-coming-soon text-xs sm:text-sm text-[#0F4F40]/60"
+                                        className="font-coming-soon text-xs sm:text-sm text-[#064e3b]/60"
                                         style={{
                                             fontFamily:
                                                 "var(--font-coming-soon)",

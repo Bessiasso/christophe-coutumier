@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function Page1() {
     const containerVariants = {
@@ -29,52 +30,66 @@ export function Page1() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-center justify-center h-full text-center space-y-6 sm:space-y-8 p-4"
+            className="relative flex flex-col items-center justify-center h-full text-center space-y-6 sm:space-y-8 p-4"
         >
+            {/* Decorative corner elements */}
+            <div className="absolute top-2 left-2 w-6 h-6 border-t-2 border-l-2 border-[#064e3b]/30" />
+            <div className="absolute top-2 right-2 w-6 h-6 border-t-2 border-r-2 border-[#064e3b]/30" />
+            <div className="absolute -bottom-4 left-2 w-6 h-6 border-b-2 border-l-2 border-[#064e3b]/30" />
+            <div className="absolute -bottom-4 right-2 w-6 h-6 border-b-2 border-r-2 border-[#064e3b]/30" />
+
+            {/* Decorative floral elements */}
+            <div className="absolute top-3 left-1/2 -translate-x-1/2 text-[#064e3b]/20 text-2xl">
+                ❀
+            </div>
+            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[#064e3b]/20 text-2xl">
+                ❀
+            </div>
+
             <motion.div
                 variants={itemVariants}
-                className="w-16 h-0.5 bg-[#0F4F40]/30 mx-auto"
+                className="absolute w-16 top-2 h-0.5 bg-[#064e3b]/30 mx-auto"
             />
 
-            <motion.div variants={itemVariants} className="space-y-4">
+            <motion.div variants={itemVariants} className="space-y-4 ">
                 <h3
-                    className="font-great-vibes text-3xl sm:text-4xl md:text-5xl text-[#0F4F40]"
+                    className="font-great-vibes text-4xl sm:text-4xl md:text-5xl text-[#064e3b]"
                     style={{ fontFamily: "var(--font-great-vibes)" }}
                 >
                     Chers famille et amis
                 </h3>
-                <div className="flex items-center justify-center gap-4 w-full my-4">
-                    <div className="flex-1 h-0.5 bg-[#0F4F40]/30" />
-                    <div className="text-xl text-[#0F4F40]/50">❦</div>
-                    <div className="flex-1 h-0.5 bg-[#0F4F40]/30" />
+                <div className="px-3 flex items-center justify-center gap-4 w-full my-3">
+                    <div className="flex-1 h-0.5 bg-[#064e3b]/30" />
+                    <div className="text-xl text-[#064e3b]/50">❦</div>
+                    <div className="flex-1 h-0.5 bg-[#064e3b]/30" />
                 </div>
-                <div className="space-y-3">
-                    <p
-                        className="font-coming-soon text-sm sm:text-base text-[#0F4F40]/80 max-w-md leading-relaxed"
-                        style={{ fontFamily: "var(--font-coming-soon)" }}
-                    >
-                        Nous sommes ravis de vous annoncer notre mariage coutumier ! 🥳
-                    </p>
-                    <p
-                        className="font-coming-soon text-sm sm:text-base text-[#0F4F40]/80 max-w-md leading-relaxed"
-                        style={{ fontFamily: "var(--font-coming-soon)" }}
-                    >
-                        Nos familles et nous avons hâte de célébrer ce moment spécial avec vous !
-                    </p>
-                    <p
-                        className="font-coming-soon text-sm sm:text-base text-[#0F4F40]/80 max-w-md leading-relaxed"
-                        style={{ fontFamily: "var(--font-coming-soon)" }}
-                    >
-                        Vous aurez les détails relatifs au lieu et à l&apos;heure de la cérémonie, sur vos cartes d&apos;invitation.
-                    </p>
+                {/* Text section with image background */}
+                <div className="relative w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-lg min-h-[300px]">
+                    {/* Background Image */}
+                    <div className="absolute inset-0">
+                        <Image
+                            src="/images/christophe3.jpg"
+                            alt="Wedding"
+                            fill
+                            className="object-cover"
+                        />
+                        {/* Overlay for better text readability */}
+                        <div className="absolute inset-0 bg-black/20" />
+                    </div>
+                    {/* Text content */}
+                    <div className="relative space-y-3 p-6 sm:p-8 min-h-[300px] flex flex-col justify-center">
+                        <p className="font-great-vibes text-4xl sm:text-5xl text-white max-w-md leading-relaxed drop-shadow-lg">
+                            Nous sommes ravis de vous annoncer notre mariage
+                            coutumier !
+                        </p>
+                    </div>
                 </div>
             </motion.div>
 
             <motion.div
                 variants={itemVariants}
-                className="w-16 h-0.5 bg-[#0F4F40]/30 mx-auto mt-4"
+                className="absolute w-16 bottom-2 h-0.5 bg-[#064e3b]/30 mx-auto"
             />
         </motion.div>
     );
 }
-

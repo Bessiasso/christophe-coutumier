@@ -1,30 +1,37 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFF8E7;
-  --foreground: #191970;
-  --ivory: #FFF8E7;
-  --cream-gold: #F5E6D3;
-  --midnight-blue: #191970;
-  
-  --font-great-vibes: var(--font-great-vibes);
-  --font-coming-soon: var(--font-coming-soon);
+    --background: #fff8e7;
+    --foreground: #064e3b;
+    --ivory: #fff8e7;
+    --cream-gold: #f5e6d3;
+    --emerald-green: #064e3b;
+    --peach-blush: #f5d0c2;
+
+    --font-great-vibes: var(--font-great-vibes);
+    --font-coming-soon: var(--font-coming-soon);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-ivory: var(--ivory);
-  --color-cream-gold: var(--cream-gold);
-  --color-midnight-blue: var(--midnight-blue);
-  
-  --font-great-vibes: var(--font-great-vibes);
-  --font-coming-soon: var(--font-coming-soon);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-ivory: var(--ivory);
+    --color-cream-gold: var(--cream-gold);
+    --color-emerald-green: var(--emerald-green);
+    --color-peach-blush: var(--peach-blush);
+
+    --font-great-vibes: var(--font-great-vibes);
+    --font-coming-soon: var(--font-coming-soon);
+}
+
+html,
+body {
+    overflow-x: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-coming-soon), sans-serif;
-  overflow-x: hidden;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-coming-soon), sans-serif;
+    overscroll-behavior-y: contain;
 }

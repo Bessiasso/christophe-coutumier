@@ -29,63 +29,28 @@ export function Page3() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-center justify-center h-full text-center space-y-6 sm:space-y-8 p-4"
+            className="relative flex flex-col items-center justify-center h-full text-center space-y-6 sm:space-y-8 p-4"
         >
-            <motion.div
-                variants={itemVariants}
-                className="w-16 h-0.5 bg-[#0F4F40]/30 mx-auto"
-            />
+            {/* Decorative corner elements */}
+            <div className="absolute top-4 left-4 w-6 h-6 border-t-2 border-l-2 border-[#064e3b]/30" />
+            <div className="absolute top-4 right-4 w-6 h-6 border-t-2 border-r-2 border-[#064e3b]/30" />
+            <div className="absolute bottom-4 left-4 w-6 h-6 border-b-2 border-l-2 border-[#064e3b]/30" />
+            <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-[#064e3b]/30" />
+
+            {/* Decorative floral elements */}
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 text-[#064e3b]/20 text-2xl">
+                ❀
+            </div>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[#064e3b]/20 text-2xl">
+                ❀
+            </div>
 
             <motion.div variants={itemVariants} className="space-y-4">
-                <h3
-                    className="font-great-vibes text-3xl sm:text-4xl md:text-5xl text-[#0F4F40]"
-                    style={{ fontFamily: "var(--font-great-vibes)" }}
-                >
-                    Informations importantes
-                </h3>
-                <div className="flex items-center justify-center gap-4 w-full my-4">
-                    <div className="flex-1 h-0.5 bg-[#0F4F40]/30" />
-                    <div className="text-xl text-[#0F4F40]/50">❦</div>
-                    <div className="flex-1 h-0.5 bg-[#0F4F40]/30" />
-                </div>
-                <div className="space-y-3">
-                    <p
-                        className="font-coming-soon text-sm sm:text-base text-[#0F4F40] font-semibold"
-                        style={{ fontFamily: "var(--font-coming-soon)" }}
-                    >
-                        *Important :*
-                    </p>
-                    <p
-                        className="font-coming-soon text-sm sm:text-base text-[#0F4F40]/80 max-w-md leading-relaxed"
-                        style={{ fontFamily: "var(--font-coming-soon)" }}
-                    >
-                        Merci de garder cette nouvelle pour vous, votre invitation est strictement personnelle.
-                    </p>
-                    <div className="flex items-center justify-center gap-4 w-full my-4">
-                        <div className="flex-1 h-0.5 bg-[#0F4F40]/30" />
-                        <div className="text-xl text-[#0F4F40]/50">❦</div>
-                        <div className="flex-1 h-0.5 bg-[#0F4F40]/30" />
-                    </div>
-                    <p
-                        className="font-coming-soon text-sm sm:text-base text-[#0F4F40]/80 max-w-md leading-relaxed"
-                        style={{ fontFamily: "var(--font-coming-soon)" }}
-                    >
-                        Avec tout notre amour,
-                    </p>
-                    <p
-                        className="font-great-vibes text-2xl sm:text-3xl text-[#0F4F40]"
-                        style={{ fontFamily: "var(--font-great-vibes)" }}
-                    >
-                        Marie-Paule & Christophe
-                    </p>
-                </div>
+                <p className="font-coming-soon text-xl sm:text-xl md:text-2xl text-[#064e3b] max-w-md leading-relaxed">
+                    Nos familles et nous avons hâte de célébrer ce moment
+                    spécial avec vous !
+                </p>
             </motion.div>
-
-            <motion.div
-                variants={itemVariants}
-                className="w-16 h-0.5 bg-[#0F4F40]/30 mx-auto mt-4"
-            />
         </motion.div>
     );
 }
-
