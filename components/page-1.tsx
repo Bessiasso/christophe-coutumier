@@ -68,7 +68,7 @@ export function Page1() {
                     {/* Background Image */}
                     <div className="absolute inset-0">
                         <Image
-                            src="/images/christophe3.jpg"
+                            src="/images/christophe9.jpg"
                             alt="Wedding"
                             fill
                             className="object-cover"
@@ -78,7 +78,7 @@ export function Page1() {
                     </div>
                     {/* Text content */}
                     <div className="relative space-y-3 p-6 sm:p-8 min-h-[300px] flex flex-col justify-center">
-                        <p className="font-great-vibes text-4xl sm:text-5xl text-white max-w-md leading-relaxed drop-shadow-lg">
+                        <p className="font-great-vibes text-4xl sm:text-5xl text-white max-w-md leading-tight drop-shadow-lg">
                             Nous sommes ravis de vous annoncer notre mariage
                             coutumier !
                         </p>
