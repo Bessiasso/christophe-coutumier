@@ -77,8 +77,8 @@ export function Page1() {
                         <div className="absolute inset-0 bg-black/20" />
                     </div>
                     {/* Text content */}
-                    <div className="relative space-y-3 p-6 sm:p-8 min-h-[300px] flex flex-col justify-center">
-                        <p className="font-great-vibes text-4xl sm:text-5xl text-white max-w-md leading-tight drop-shadow-lg">
+                    <div className="relative space-y-3 p-6 sm:p-8 min-h-[300px] flex flex-col justify-end">
+                        <p className="font-great-vibes text-[25px] sm:text-5xl text-white max-w-md leading-tight drop-shadow-lg">
                             Nous sommes ravis de vous annoncer notre mariage
                             coutumier !
                         </p>
