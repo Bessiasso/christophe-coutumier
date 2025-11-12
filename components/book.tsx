@@ -116,37 +116,68 @@ export function Book({ children }: BookProps) {
                                     <div className="absolute inset-4 border-2 border-[#064e3b] rounded-xl z-10" />
 
                                     {/* Title on cover */}
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10">
-                                        <motion.h1
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.2 }}
-                                            className="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#064e3b] drop-shadow-lg mb-4"
-                                            style={{
-                                                fontFamily:
-                                                    "var(--font-great-vibes)",
-                                            }}
-                                        >
-                                            Marriage
-                                        </motion.h1>
-                                        <motion.div
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ delay: 0.4 }}
-                                            className="w-24 h-0.5 bg-[#064e3b]/70 my-4"
-                                        />
-                                        <motion.p
-                                            initial={{ opacity: 0, y: -20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: 0.6 }}
-                                            className="font-coming-soon text-sm sm:text-base text-white drop-shadow-md"
-                                            style={{
-                                                fontFamily:
-                                                    "var(--font-coming-soon)",
-                                            }}
-                                        >
-                                            Cliquez pour ouvrir
-                                        </motion.p>
+                                    <div className="absolute inset-0 flex flex-col items-center justify-center p-8 z-10">
+                                        {/* Title text at top */}
+                                        <div className="flex flex-col items-start text-left -mt-20 sm:-mt-16 md:-mt-20">
+                                            <motion.p
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: 0.1 }}
+                                                className="font-great-vibes text-2xl sm:text-3xl md:text-4xl text-emerald-green drop-shadow-lg mb-1"
+                                                style={{
+                                                    fontFamily:
+                                                        "var(--font-great-vibes)",
+                                                }}
+                                            >
+                                                Notre
+                                            </motion.p>
+                                            <motion.h1
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: 0.2 }}
+                                                className="font-great-vibes text-5xl sm:text-6xl md:text-7xl text-[#064e3b] drop-shadow-lg"
+                                                style={{
+                                                    fontFamily:
+                                                        "var(--font-great-vibes)",
+                                                }}
+                                            >
+                                                Marriage
+                                            </motion.h1>
+                                            <motion.p
+                                                initial={{ opacity: 0, y: 20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: 0.3 }}
+                                                className="font-great-vibes text-3xl sm:text-3xl md:text-4xl text-emerald-green drop-shadow-lg -mt-2 mb-10"
+                                                style={{
+                                                    fontFamily:
+                                                        "var(--font-great-vibes)",
+                                                }}
+                                            >
+                                                Coutumier
+                                            </motion.p>
+                                        </div>
+
+                                        {/* Bottom section with bar and text */}
+                                        <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center">
+                                            <motion.div
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ delay: 0.4 }}
+                                                className="w-24 h-0.5 bg-[#064e3b]/70 mb-4"
+                                            />
+                                            <motion.p
+                                                initial={{ opacity: 0, y: -20 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ delay: 0.6 }}
+                                                className="font-coming-soon text-sm sm:text-base text-white drop-shadow-md text-center"
+                                                style={{
+                                                    fontFamily:
+                                                        "var(--font-coming-soon)",
+                                                }}
+                                            >
+                                                Cliquez pour ouvrir
+                                            </motion.p>
+                                        </div>
                                     </div>
 
                                     {/* Decorative corner elements */}
