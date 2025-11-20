@@ -135,16 +135,31 @@ export function Page2() {
                     {invitationData.venue} - {invitationData.location}
                 </p>
                 {/* Google Maps Link */}
-                <a
-                    href="https://maps.app.goo.gl/oZ6nUU7kucYhJnc8A"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-coming-soon text-sm sm:text-base text-[#064e3b] hover:text-[#064e3b]/80 transition-colors underline decoration-[#064e3b]/40 hover:decoration-[#064e3b]/60"
-                    style={{ fontFamily: "var(--font-coming-soon)" }}
-                >
-                    Voir sur Google Maps
-                    <ExternalLink className="w-4 h-4" />
-                </a>
+                <div>
+                    <a
+                        href="https://maps.app.goo.gl/oZ6nUU7kucYhJnc8A"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 font-coming-soon text-sm sm:text-base text-[#064e3b] hover:text-[#064e3b]/80 transition-colors underline decoration-[#064e3b]/40 hover:decoration-[#064e3b]/60"
+                        style={{ fontFamily: "var(--font-coming-soon)" }}
+                    >
+                        Voir sur Google Maps
+                        <ExternalLink className="w-4 h-4" />
+                    </a>
+                </div>
+                {/* Google Form Link */}
+                <div>
+                    <a
+                        href="https://forms.gle/3Lv8ZfkvCPN3ZDV1A"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 font-coming-soon text-sm sm:text-base text-[#064e3b] hover:text-[#064e3b]/80 transition-colors underline decoration-[#064e3b]/40 hover:decoration-[#064e3b]/60"
+                        style={{ fontFamily: "var(--font-coming-soon)" }}
+                    >
+                        Confirmer votre présence
+                        <ExternalLink className="w-4 h-4" />
+                    </a>
+                </div>
             </motion.div>
 
             {/* Decorative bottom element */}
